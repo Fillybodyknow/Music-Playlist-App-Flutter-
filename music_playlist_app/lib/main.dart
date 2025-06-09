@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_playlist_app/approute/pages.dart';
 
+void main() {
+  runApp(const MainApp());
+}
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
