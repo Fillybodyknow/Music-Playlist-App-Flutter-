@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_playlist_app/approute/pages.dart';
+import 'package:music_playlist_app/page/home/controller.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.put(AppHomeController());
   runApp(const MainApp());
 }
 
