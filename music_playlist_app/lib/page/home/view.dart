@@ -4,6 +4,7 @@ import 'package:music_playlist_app/page/home/widget/top_body.dart';
 import 'package:music_playlist_app/page/home/widget/list_music.dart';
 import 'package:music_playlist_app/page/home/controller.dart';
 import 'package:music_playlist_app/page/home/widget/ิbottombar.dart';
+import 'package:music_playlist_app/page/home/widget/my_playlist.dart';
 
 class AppHome extends StatelessWidget {
   AppHomeController controller = Get.put(AppHomeController());
@@ -29,7 +30,7 @@ class AppHome extends StatelessWidget {
               if (controller.Index.value == 0) {
                 return listMusic();
               } else if (controller.Index.value == 1) {
-                return SizedBox.shrink();
+                return Myplaylist(context);
               } else {
                 return SizedBox.shrink();
               }

@@ -1,9 +1,12 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:music_playlist_app/page/home/model.dart';
 import 'package:audioplayers/audioplayers.dart';
+
+import 'package:path_provider/path_provider.dart';
 
 class AppHomeController extends GetxController {
   RxList<music_info_model> music_list = RxList<music_info_model>();
@@ -15,6 +18,8 @@ class AppHomeController extends GetxController {
   RxBool isPlaying = false.obs;
   Rx<Duration> position = Rx(Duration.zero);
   Rx<Duration> duration = Rx(Duration.zero);
+
+  RxList<playlist_model> playlist_list = RxList<playlist_model>();
 
   final player = AudioPlayer();
 
@@ -113,5 +118,58 @@ class AppHomeController extends GetxController {
     author_list.value = (jsonDecode(respones) as List)
         .map((e) => author_model.fromJson(e))
         .toList();
+  }
+
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
+
+  Future<File> get _localFile async {
+    final path = await _localPath;
+    return File('$path/MyPlaylist.json');
+  }
+
+  void createPlaylist(playlist_model playlist) async {
+    playlist_list.add(playlist);
+    await savePlaylistListToFile();
+  }
+
+  void deletePlaylist(int playlistId) {
+    playlist_list.removeWhere((element) => element.playlist_id == playlistId);
+    // ถ้ามี save ลง file ก็ save ด้วย เช่น:
+    savePlaylistListToFile();
+  }
+
+  Future<void> savePlaylistListToFile() async {
+    final file = await _localFile;
+
+    List<Map<String, dynamic>> jsonList =
+        playlist_list.map((p) => p.toJson()).toList();
+
+    String jsonString = jsonEncode(jsonList);
+    await file.writeAsString(jsonString);
+  }
+
+  Future<void> readPlaylistListFromFile() async {
+    final file = await _localFile;
+
+    if (await file.exists()) {
+      String jsonString = await file.readAsString();
+      print('Raw JSON string from file: $jsonString'); // Debug print
+
+      List<dynamic> jsonData = jsonDecode(jsonString);
+      print('Decoded JSON data (List<dynamic>): $jsonData'); // Debug print
+
+      playlist_list.value = jsonData.map((jsonItem) {
+        print('Mapping JSON item: $jsonItem'); // Debug print each item
+        return playlist_model.fromJson(jsonItem);
+      }).toList();
+      print(
+          'Successfully mapped playlist_list: ${playlist_list.value}'); // Debug print
+    } else {
+      playlist_list.value = [];
+      print('Playlist file does not exist, initializing empty list.');
+    }
   }
 }
