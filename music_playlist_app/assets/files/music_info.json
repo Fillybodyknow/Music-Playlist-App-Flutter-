@@ -1,0 +1,68 @@
+[
+    {
+        "id": 0,
+        "author_id": 0,
+        "title": "Cupid",
+        "url_player": "music/audios/FIFTY FIFTY - Cupid (Twin Version) (Lyrics).mp3"
+    },
+    {
+        "id": 1,
+        "author_id": 1,
+        "title": "Take Me to Your Heart",
+        "url_player": "music/audios/Take Me to Your Heart - Michael Learns To Rock ( Video Lyrics Official).mp3"
+    },
+    {
+        "id": 2,
+        "author_id": 2,
+        "title": "Walk Away",
+        "url_player": "music/audios/Walk Away.mp3"
+    },
+    {
+        "id": 3,
+        "author_id": 3,
+        "title": "Harleys In Hawaii",
+        "url_player": "music/audios/Harley's in Hawaii (eyeroze Cover).mp3"
+    },
+    {
+        "id": 4,
+        "author_id": 4,
+        "title": "Flowers",
+        "url_player": "music/audios/Miley Cyrus - Flowers (Official Video).mp3"
+    },
+    {
+        "id": 5,
+        "author_id": 5,
+        "title": "That’s What I Like",
+        "url_player": "music/audios/Bruno Mars - Thats What I Like [Official Music Video].mp3"
+    },
+    {
+        "id": 6,
+        "author_id": 5,
+        "title": "The Lazy Song",
+        "url_player": "music/audios/Bruno Mars - The Lazy Song (Official Music Video).mp3"
+    },
+    {
+        "id": 7,
+        "author_id": 5,
+        "title": "Just The Way You Are",
+        "url_player": "music/audios/Bruno Mars - Just The Way You Are (Lyrics).mp3"
+    },
+    {
+        "id": 8,
+        "author_id": 6,
+        "title": "Sugar",
+        "url_player": "music/audios/Maroon 5 - Sugar (Lyrics).mp3"
+    },
+    {
+        "id": 9,
+        "author_id": 6,
+        "title": "Girls Like You",
+        "url_player": "music/audios/Maroon 5 - Girls Like You (Lyrics).mp3"
+    },
+    {
+        "id": 10,
+        "author_id": 7,
+        "title": "Bye Bye Bye",
+        "url_player": "music/audios/NSYNC - Bye Bye Bye (Official Audio).mp3"
+    }
+]

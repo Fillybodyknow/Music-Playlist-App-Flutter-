@@ -1,0 +1,42 @@
+[
+    {
+        "author_id": 0,
+        "name": "7 Clouds",
+        "trumbnail": "assets/music/thumbnails/7clouds.jpg"
+    },
+    {
+        "author_id": 1,
+        "name": "Michael Learns To Rock",
+        "trumbnail": "assets/music/thumbnails/MLTR.jpg"
+    },
+    {
+        "author_id": 2,
+        "name": "Dia Frampton",
+        "trumbnail": "assets/music/thumbnails/DiaFRT.jpg"
+    },
+    {
+        "author_id": 3,
+        "name": "Katy Perry",
+        "trumbnail": "assets/music/thumbnails/katy_perry.jpg"
+    },
+    {
+        "author_id": 4,
+        "name": "Miley Cyrus",
+        "trumbnail": "assets/music/thumbnails/miley_cyrus.jpg"
+    },
+    {
+        "author_id": 5,
+        "name": "Bruno Mars",
+        "trumbnail": "assets/music/thumbnails/bruno_mars.jpg"
+    },
+    {
+        "author_id": 6,
+        "name": "Maroon 5",
+        "trumbnail": "assets/music/thumbnails/maroon_five.jpg"
+    },
+    {
+        "author_id": 7,
+        "name": "*NSYNC",
+        "trumbnail": "assets/music/thumbnails/nsync.jpg"
+    }
+]
