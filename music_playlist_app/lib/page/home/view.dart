@@ -24,18 +24,7 @@ class AppHome extends StatelessWidget {
         ),
         body: Container(
           height: double.infinity,
-          child: Column(children: [
-            topBody(),
-            Obx(() {
-              if (controller.Index.value == 0) {
-                return listMusic();
-              } else if (controller.Index.value == 1) {
-                return Myplaylist(context);
-              } else {
-                return SizedBox.shrink();
-              }
-            })
-          ]),
+          child: Column(children: [topBody(), Obx(() => listMusic())]),
         ),
         bottomNavigationBar: Obx(() => bottomBar()));
   }

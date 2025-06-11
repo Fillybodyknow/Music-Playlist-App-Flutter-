@@ -28,37 +28,37 @@ Widget topBody() {
                   onPressed: () {
                     Controller.Index.value = 0;
                   },
-                  child: Text("All Music",
+                  child: Text("My Playlist",
                       style: TextStyle(
                           color: Controller.Index.value == 0
                               ? Colors.white
                               : Colors.cyan[100]))),
             )),
-            Expanded(
-                child: Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          color: Controller.Index.value == 1
-                              ? Colors.white
-                              : Colors.transparent,
-                          width: 5))),
-              child: TextButton(
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0.0),
-                    ),
-                  )),
-                  onPressed: () {
-                    Controller.Index.value = 1;
-                  },
-                  child: Text("My Playlist",
-                      style: TextStyle(
-                          color: Controller.Index.value == 1
-                              ? Colors.white
-                              : Colors.cyan[100]))),
-            )),
+            // Expanded(
+            //     child: Container(
+            //   decoration: BoxDecoration(
+            //       border: Border(
+            //           bottom: BorderSide(
+            //               color: Controller.Index.value == 1
+            //                   ? Colors.white
+            //                   : Colors.transparent,
+            //               width: 5))),
+            //   child: TextButton(
+            //       style: ButtonStyle(
+            //           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            //         RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(0.0),
+            //         ),
+            //       )),
+            //       onPressed: () {
+            //         Controller.Index.value = 1;
+            //       },
+            //       child: Text("My Playlist",
+            //           style: TextStyle(
+            //               color: Controller.Index.value == 1
+            //                   ? Colors.white
+            //                   : Colors.cyan[100]))),
+            // )),
           ],
         )),
   );
